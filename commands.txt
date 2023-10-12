@@ -1,0 +1,37 @@
+Internet Access in Kali Nethunter CLI
+
+To get internet access in your Kali Nethunter CLI installed on your Android device through Termux, you need to ensure that your Android device has an active internet connection. Here's how you can set up internet access for Kali Nethunter CLI in Termux:
+
+1. Connect your Android device to the internet through Wi-Fi or mobile data.
+
+2. Open the Termux app on your Android device.
+
+3. Start your Kali Nethunter CLI session by running:
+
+   ```
+   nethunter
+   ```
+
+4. After entering the Kali Nethunter CLI, you can check your network connectivity by running:
+
+   ```
+   ifconfig
+   ```
+
+   This will display network interfaces, and you should see interfaces like `eth0` and `wlan0`. Make sure that `wlan0` is up and has an IP address assigned to it.
+
+5. If `wlan0` is not up, you can try bringing it up manually by running the following command:
+
+   ```
+   ifconfig wlan0 up
+   ```
+
+6. Once `wlan0` is up and has an IP address assigned, you should have internet access in your Kali Nethunter CLI. You can test your internet connection by running a command like:
+
+   ```
+   ping google.com
+   ```
+
+   If you receive responses from Google's servers, it means your internet connection is working.
+
+Please note that you may encounter network-related issues due to various factors, and the steps above assume that you have a properly configured network interface in your Android device and that Termux and Kali Nethunter are functioning correctly. If you continue to face issues, you may need to troubleshoot your network configuration or consult the Kali Nethunter documentation for specific troubleshooting steps.
